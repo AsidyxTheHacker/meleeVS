@@ -120,5 +120,5 @@ function matches(){
         case 48: new Match("Mew2King", "SFAT", "Winners Finals", "CEO Dreamland", 2); break;
         case 49: new Match("Mango", "Armada", "Winners Semis", "Royal Flush", 1); break;
         case 50: new Match("Axe", "Hungrybox", "Winners Semis", "CEO 2017", 2); break;
-    }
-}
+    };
+};

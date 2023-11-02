@@ -52,7 +52,7 @@ playerTwoProfile.addEventListener('click', () => {
     }
 })
 
-let currentNum = 50;
+let currentNum = 70;
 let nextBtn = document.getElementById('nextBtn');
 nextBtn.addEventListener('click', () => {
     randomNum = Math.floor(Math.random() * currentNum) + 1;
@@ -81,7 +81,7 @@ function matches(){
         case 9: new Match("Zain", "Moky", "Losers Eighths", "Apex 2023", 1); break;
         case 10: new Match("KoDoRiN", "Soonsay", "Group C Pools", "Smash Summit 14", 2); break;
         case 11: new Match("Cody Schwab", "Hungrybox", "Winners Semis", "GOML 2022", 2); break;
-        case 12: new Match("Wizzrobe", "Leffen", "Winners Semis", "Smash Summit 12", 1); break;
+        case 12: new Match("Wizzrobe", "Leffen", "Group C Pools", "Smash Summit 12", 1); break;
         case 13: new Match("SFAT", "Ginger", "Losers Quarters", "Mainstage 2021", 1); break;
         case 14: new Match("SluG", "Aklo", "Losers Semis", "The Function", 2); break;
         case 15: new Match("Hungrybox", "Wizzrobe", "Losers Semis", "Riptide 2021", 1); break;
@@ -89,7 +89,7 @@ function matches(){
         case 17: new Match("Axe", "Zain", "Losers Quarters", "LACS 3", 1); break;
         case 18: new Match("Spark", "SFAT", "Losers Quarters", "GOML Online 2020", 2); break;
         case 19: new Match("Zain", "Plup", "Winners Semis", "Pound 2020 Online", 1); break;
-        case 20: new Match("Mango", "Plup", "Winners Quarters", "Smash Summit 9", 1); break;
+        case 20: new Match("Mango", "Plup", "Group B Pools", "Smash Summit 9", 2); break;
         case 21: new Match("Trif", "Solobattle", "Losers Semis", "Valhalla III", 2); break;
         case 22: new Match("S2J", "Trif", "Losers Eighths", "Dreamhack Rotterdam 2019", 1); break;
         case 23: new Match("Lucky", "Wizzrobe", "Losers Top 16", "The Big House 9", 1); break;
@@ -120,5 +120,30 @@ function matches(){
         case 48: new Match("Mew2King", "SFAT", "Winners Finals", "CEO Dreamland", 2); break;
         case 49: new Match("Mango", "Armada", "Winners Semis", "Royal Flush", 1); break;
         case 50: new Match("Axe", "Hungrybox", "Winners Semis", "CEO 2017", 2); break;
+        case 51: new Match("S2J", "Wizzrobe", "Losers Top 24", "The Big House 11", 2); break;
+        case 52: new Match("Plup", "Leffen", "Winners Quarters", "Shine 2017", 1); break;
+        case 53: new Match("Mango", "SFAT", "Winners Quarters", "Shine 2018", 1); break;
+        case 54: new Match("Wizzrobe", "n0ne", "Grand Finals Set 1", "The Script: Episode 1", 1); break;
+        case 55: new Match("aMSa", "Hungrybox", "Group 1 Pools", "Smash Summit 7", 2); break;
+        case 56: new Match("Axe", "SFAT", "Winners Finals", "LACS 1", 1); break;
+        case 57: new Match("Trif", "PewPewU", "Winners Semis", "Genesis 6", 2); break;
+        case 58: new Match("Shroomed", "SFAT", "Losers Eighths", "Battle of BC 3", 2); break;
+        case 59: new Match("Leffen", "Zain", "Winners Quarters", "GOML 2019", 1); break;
+        case 60: new Match("Magi", "SFAT", "Winners Quarters", "CEO 2019", 2); break;
+        case 61: new Match("n0ne", "Cody Schwab", "Losers Eighths", "Super Smash Con 2019", 1); break;
+        case 62: new Match("Mew2King", "Hungrybox", "Winners Semis", "EGLX 2019", 1); break;
+        case 63: new Match("KoDoRiN", "Lucky", "Losers Semis", "Genesis: Black", 2); break;
+        case 64: new Match("Fiction", "S2J", "Losers Quarters", "Wavedash 2023", 1); break;
+        case 65: new Match("Soonsay", "SluG", "Winners Top 32", "Mainstage 2022", 2); break;
+        case 66: new Match("Zain", "aMSa", "Winners Semis", "Smash Summit 14", 2); break;
+        case 67: new Match("Hungrybox", "Leffen", "Losers Finals", "Ludwig Smash Invitational", 1); break;
+        case 68: new Match("SDJ", "Salt", "Losers Top 12", "The Off-Season", 2); break;
+        case 69: new Match("SFAT", "PewPewU", "Winners Quarters", "DPOTG 2016", 1); break;
+        case 70: new Match("Wizzrobe", "Trif", "Losers Eighths", "Dreamhack Winter 2016", 1); break;
+        case 71: new Match("Mew2King", "Mango", "Winners Semis", "Smash Summit 3", 1); break;
+        case 72: new Match("Leffen", "Axe", "Losers Top 12", "Smash Summit 3", 2); break;
+        case 73: new Match("Mew2King", "Armada", "Winners Finals", "Canada Cup 2016", 2); break;
+        case 74: new Match("Mango", "Armada", "Grand Finals - Set 2", "The Big House 6", 1); break;
+        case 75: new Match("Lucky", "SFAT", "Winners Quarters", "Clutch City Clash", 2); break;
     };
 };

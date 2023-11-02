@@ -52,7 +52,7 @@ playerTwoProfile.addEventListener('click', () => {
     }
 })
 
-let currentNum = 7;
+let currentNum = 75;
 let nextBtn = document.getElementById('nextBtn');
 nextBtn.addEventListener('click', () => {
     randomNum = Math.floor(Math.random() * currentNum) + 1;

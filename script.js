@@ -106,7 +106,7 @@ function matches(){
         case 34: new Match("Llod", "Polish", "Winners Quarters", "Super Smash Con 2019", 1); break;
         case 35: new Match("Cody Schwab", "Fiction", "Grand Finals - Set 1", "Saving Mr. Lombardi 2", 2); break;
         case 36: new Match("Axe", "Wizzrobe", "Group A Pools", "Smash Summit 9", 1); break;
-        case 37: new Match("Gahztu", "S2J", "Losers Eighths", "Low Tide City 2021", 1); break;
+        case 37: new Match("Gahtzu", "S2J", "Losers Eighths", "Low Tide City 2021", 1); break;
         case 38: new Match("Hungrybox", "Cody Schwab", "Losers Semis", "SWT 2021 NA East", 2); break;
         case 39: new Match("Jmook", "Plup", "Winners Top 32", "Genesis 8", 1); break;
         case 40: new Match("Zain", "Llod", "Group A Pools", "Smash Summit 13", 2); break;

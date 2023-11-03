@@ -113,8 +113,20 @@ main {
 }
 
 .correctAns {
-    border: solid green 5px;
-    color: green;
+    border: solid rgb(52, 224, 52) 5px;
+}
+
+.correctAnsTxt {
+    margin-top: .2em;
+    color: rgb(52, 224, 52);
+    text-shadow: rgb(6, 123, 6) 2px 2px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
 }
 
 .btnFadeIn {
@@ -136,7 +148,7 @@ main {
     animation-fill-mode: forwards;
 }
 
-.btnVanish {
+.vanish {
     display: none;
 }
 
@@ -167,4 +179,6 @@ main {
     .tournament-container{margin-bottom: 1em; max-width: 20em;}
     .nextBtn{padding: .5em 1em; margin-top: .5em; font-size: 1em; box-shadow: inset rgb(41, 117, 149) 1px 1px 0; border: rgb(41, 117, 149) solid 2px;}
     .nextBtn:active{font-size: .9em;}
+    .correctAnsTxt{text-shadow: rgb(6, 123, 6) 1px 1px;}
+    .footer .plain-text{margin-top: .2em; font-size: 2em;}
 }

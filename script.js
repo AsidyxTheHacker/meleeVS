@@ -7,57 +7,88 @@ class Match {
         document.getElementById('playerOneImg').src = `media/players/${player1}.png`;
         document.getElementById('playerTwoImg').src = `media/players/${player2}.png`;
         if(correct == 1){
-            document.getElementById('playerOne').classList.add('correct');
-            document.getElementById('playerTwo').classList.remove('correct');
+            document.getElementById('playerOne').classList.add('correct', 'point');
+            document.getElementById('playerTwo').classList.remove('correct', 'point');
         }
         else{
-            document.getElementById('playerTwo').classList.add('correct');
-            document.getElementById('playerOne').classList.remove('correct');
+            document.getElementById('playerTwo').classList.add('correct', 'point');
+            document.getElementById('playerOne').classList.remove('correct', 'point');
         };
     }
 }
 
+let score = document.getElementById('score');
+let scoreNum = 1;
 let playerOneProfile = document.getElementById('playerOne');
 let playerTwoProfile = document.getElementById('playerTwo');
 let playerOneImg = document.getElementById('playerOneImg');
 let playerTwoImg = document.getElementById('playerTwoImg');
 playerOneProfile.addEventListener('click', () => {
     document.getElementById('nextBtn').classList.add('btnFadeIn');
-    document.getElementById('nextBtn').classList.remove('btnVanish');
+    document.getElementById('nextBtn').classList.remove('vanish');
+    score.classList.remove('vanish');
     if(playerOneProfile.classList.contains('correct')){
+        // score.innerText = scoreNum++;
         playerTwoProfile.classList.add('incorrectAns');
         playerTwoProfile.classList.remove('player')
+        document.getElementById('playerOneName').classList.add('correctAnsTxt');
         playerOneProfile.classList.remove('player')
         playerOneImg.classList.add('correctAns');
     } else{
+        // score.innerText = 0;
+        // scoreNum = 1;
         playerTwoImg.classList.add('correctAns');
         playerTwoProfile.classList.remove('player');
+        document.getElementById('playerTwoName').classList.add('correctAnsTxt');
         playerOneProfile.classList.add('incorrectAns');
         playerOneProfile.classList.remove('player');
+    }
+    if(playerOneProfile.classList.contains('point')){
+        score.innerText = scoreNum++;
+        playerOneProfile.classList.remove('point');
+    } else{
+        score.innerText = 0;
+        scoreNum = 1;
     }
 })
 playerTwoProfile.addEventListener('click', () => {
     document.getElementById('nextBtn').classList.add('btnFadeIn');
-    document.getElementById('nextBtn').classList.remove('btnVanish');
+    document.getElementById('nextBtn').classList.remove('vanish');
+    score.classList.remove('vanish');
     if(playerTwoProfile.classList.contains('correct')){
+        // score.innerText = scoreNum++;
         playerOneProfile.classList.add('incorrectAns');
         playerOneProfile.classList.remove('player');
-        playerTwoProfile.classList.remove('player')
+        document.getElementById('playerTwoName').classList.add('correctAnsTxt');
+        playerTwoProfile.classList.remove('player');
         playerTwoImg.classList.add('correctAns');
     } else{
+        // score.innerText = 0;
+        // scoreNum = 1;
         playerOneImg.classList.add('correctAns');
         playerOneProfile.classList.remove('player');
+        document.getElementById('playerOneName').classList.add('correctAnsTxt');
         playerTwoProfile.classList.add('incorrectAns');
         playerTwoProfile.classList.remove('player');
     }
+    if(playerTwoProfile.classList.contains('point')){
+        score.innerText = scoreNum++;
+        playerTwoProfile.classList.remove('point');
+    } else{
+        score.innerText = 0;
+        scoreNum = 1;
+    }
 })
 
-let currentNum = 75;
+let currentNum = 90;
 let nextBtn = document.getElementById('nextBtn');
 nextBtn.addEventListener('click', () => {
     randomNum = Math.floor(Math.random() * currentNum) + 1;
-    nextBtn.classList.add('btnVanish');
+    score.classList.add('vanish');
+    nextBtn.classList.add('vanish');
     nextBtn.classList.remove('btnFadeIn');
+    document.getElementById('playerTwoName').classList.remove('correctAnsTxt');
+    document.getElementById('playerOneName').classList.remove('correctAnsTxt');
     playerOneProfile.classList.add('player');
     playerTwoProfile.classList.add('player');
     document.querySelectorAll('.player-container > div').forEach(el => el.classList.remove('incorrectAns'));
@@ -98,13 +129,13 @@ function matches(){
         case 26: new Match("Cody Schwab", "Ginger", "Losers Semis", "The Script: Episode 2", 2); break;
         case 27: new Match("Zain", "S2J", "Winners Finals", "DPOTG 2018", 2); break;
         case 28: new Match("Axe", "Leffen", "Losers Quarters", "Smash Summit 7", 2); break;
-        case 29: new Match("Duck", "Hungrybox", "Grand Finals - Set 1", "Canada Cup 2018", 1); break;
+        case 29: new Match("Duck", "Hungrybox", "Grand Finals", "Canada Cup 2018", 2); break;
         case 30: new Match("Hungrybox", "Mango", "Group 1 Pools", "Smash Summit 6", 2); break;
         case 31: new Match("Wizzrobe", "Zain", "Losers Top 12", "Full Bloom 4", 1); break;
         case 32: new Match("SFAT", "Lucky", "Losers Top 16", "Genesis 5", 2); break;
         case 33: new Match("Hungrybox", "Albert", "Losers Quarters", "Low Tier City 7", 1); break;
         case 34: new Match("Llod", "Polish", "Winners Quarters", "Super Smash Con 2019", 1); break;
-        case 35: new Match("Cody Schwab", "Fiction", "Grand Finals - Set 1", "Saving Mr. Lombardi 2", 2); break;
+        case 35: new Match("Cody Schwab", "Fiction", "Grand Finals", "Saving Mr. Lombardi 2", 2); break;
         case 36: new Match("Axe", "Wizzrobe", "Group A Pools", "Smash Summit 9", 1); break;
         case 37: new Match("Gahtzu", "S2J", "Losers Eighths", "Low Tide City 2021", 1); break;
         case 38: new Match("Hungrybox", "Cody Schwab", "Losers Semis", "SWT 2021 NA East", 2); break;
@@ -123,10 +154,10 @@ function matches(){
         case 51: new Match("S2J", "Wizzrobe", "Losers Top 24", "The Big House 11", 2); break;
         case 52: new Match("Plup", "Leffen", "Winners Quarters", "Shine 2017", 1); break;
         case 53: new Match("Mango", "SFAT", "Winners Quarters", "Shine 2018", 1); break;
-        case 54: new Match("Wizzrobe", "n0ne", "Grand Finals Set 1", "The Script: Episode 1", 1); break;
+        case 54: new Match("Wizzrobe", "n0ne", "Grand Finals", "The Script: Episode 1", 2); break;
         case 55: new Match("aMSa", "Hungrybox", "Group 1 Pools", "Smash Summit 7", 2); break;
         case 56: new Match("Axe", "SFAT", "Winners Finals", "LACS 1", 1); break;
-        case 57: new Match("Trif", "PewPewU", "Winners Semis", "Genesis 6", 2); break;
+        case 57: new Match("Trif", "PewPewU", "Winners Quarters", "Genesis 6", 2); break;
         case 58: new Match("Shroomed", "SFAT", "Losers Eighths", "Battle of BC 3", 2); break;
         case 59: new Match("Leffen", "Zain", "Winners Quarters", "GOML 2019", 1); break;
         case 60: new Match("Magi", "SFAT", "Winners Quarters", "CEO 2019", 2); break;
@@ -143,7 +174,22 @@ function matches(){
         case 71: new Match("Mew2King", "Mango", "Winners Semis", "Smash Summit 3", 1); break;
         case 72: new Match("Leffen", "Axe", "Losers Top 12", "Smash Summit 3", 2); break;
         case 73: new Match("Mew2King", "Armada", "Winners Finals", "Canada Cup 2016", 2); break;
-        case 74: new Match("Mango", "Armada", "Grand Finals - Set 2", "The Big House 6", 1); break;
+        case 74: new Match("Mango", "Armada", "Grand Finals", "The Big House 6", 1); break;
         case 75: new Match("Lucky", "SFAT", "Winners Quarters", "Clutch City Clash", 2); break;
+        case 76: new Match("Mew2King", "Wizzrobe", "Losers Finals", "MomoCon 2018", 2); break;
+        case 77: new Match("Mango", "KoDoRiN", "Winners Quarters", "Lost Tech City 2022", 1); break;
+        case 78: new Match("Axe", "Shroomed", "Losers Quarters", "Super Smash Con 2016", 1); break;
+        case 79: new Match("Plup", "Armada", "Winners Semis", "The Big House 7", 1); break;
+        case 80: new Match("Plup", "SFAT", "Pools Group 2", "Smash Summit 10", 2); break;
+        case 81: new Match("n0ne", "Ginger", "Losers Top 24", "Genesis 7", 1); break;
+        case 82: new Match("Mango", "Leffen", "Winners Semis", "The Big House 9", 2); break;
+        case 83: new Match("Duck", "Zain", "Grand Finals", "Pat's House 3", 1); break;
+        case 84: new Match("Duck", "Axe", "Losers Top 12", "Shine 2016", 2); break;
+        case 85: new Match("Zain", "Mango", "Losers FInals", "GTX 2018", 2); break;
+        case 86: new Match("Lucky", "Axe", "Losers Top 12", "Evo 2015", 2); break;
+        case 87: new Match("Leffen", "Mew2King", "Losers Top 12", "Apex 2015", 1); break;
+        case 88: new Match("Westballz", "Leffen", "Winners Quarters", "Dreamhack Winter 2015", 1); break;
+        case 89: new Match("Plup", "Shroomed", "Losers Top 16", "The Big House 5", 2); break;
+        case 90: new Match("Armada", "Mango", "Losers Finals", "BEAST 5", 1); break;
     };
 };

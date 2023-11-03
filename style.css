@@ -63,7 +63,7 @@ main {
     justify-content: center;
     align-items: center;
     gap: 12em;
-    margin-top: 2em;
+    margin: 2em 0 -2em 0;
 }
 
 .player:hover .plain-text{

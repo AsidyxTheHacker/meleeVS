@@ -94,7 +94,7 @@ nextBtn.addEventListener('click', () => {
     document.querySelectorAll('.player-container > div').forEach(el => el.classList.remove('incorrectAns'));
     document.querySelectorAll('img').forEach(el => el.classList.remove('correctAns'));
     matches();
-})
+});
 
 window.addEventListener('load', () => {matches();});
 

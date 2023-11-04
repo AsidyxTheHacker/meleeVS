@@ -28,15 +28,12 @@ playerOneProfile.addEventListener('click', () => {
     document.getElementById('nextBtn').classList.remove('vanish');
     score.classList.remove('vanish');
     if(playerOneProfile.classList.contains('correct')){
-        // score.innerText = scoreNum++;
         playerTwoProfile.classList.add('incorrectAns');
         playerTwoProfile.classList.remove('player')
         document.getElementById('playerOneName').classList.add('correctAnsTxt');
         playerOneProfile.classList.remove('player')
         playerOneImg.classList.add('correctAns');
     } else{
-        // score.innerText = 0;
-        // scoreNum = 1;
         playerTwoImg.classList.add('correctAns');
         playerTwoProfile.classList.remove('player');
         document.getElementById('playerTwoName').classList.add('correctAnsTxt');
@@ -56,15 +53,12 @@ playerTwoProfile.addEventListener('click', () => {
     document.getElementById('nextBtn').classList.remove('vanish');
     score.classList.remove('vanish');
     if(playerTwoProfile.classList.contains('correct')){
-        // score.innerText = scoreNum++;
         playerOneProfile.classList.add('incorrectAns');
         playerOneProfile.classList.remove('player');
         document.getElementById('playerTwoName').classList.add('correctAnsTxt');
         playerTwoProfile.classList.remove('player');
         playerTwoImg.classList.add('correctAns');
     } else{
-        // score.innerText = 0;
-        // scoreNum = 1;
         playerOneImg.classList.add('correctAns');
         playerOneProfile.classList.remove('player');
         document.getElementById('playerOneName').classList.add('correctAnsTxt');
@@ -80,7 +74,7 @@ playerTwoProfile.addEventListener('click', () => {
     }
 })
 
-let currentNum = 90;
+let currentNum = 150;
 let nextBtn = document.getElementById('nextBtn');
 nextBtn.addEventListener('click', () => {
     randomNum = Math.floor(Math.random() * currentNum) + 1;
@@ -97,7 +91,6 @@ nextBtn.addEventListener('click', () => {
 });
 
 window.addEventListener('load', () => {matches();});
-
 let randomNum = Math.floor(Math.random() * currentNum) + 1;
 function matches(){
     switch(randomNum){
@@ -121,7 +114,7 @@ function matches(){
         case 18: new Match("Spark", "SFAT", "Losers Quarters", "GOML Online 2020", 2); break;
         case 19: new Match("Zain", "Plup", "Winners Semis", "Pound 2020 Online", 1); break;
         case 20: new Match("Mango", "Plup", "Group B Pools", "Smash Summit 9", 2); break;
-        case 21: new Match("Trif", "Solobattle", "Losers Semis", "Valhalla III", 2); break;
+        case 21: new Match("Trif", "Leffen", "Winners Semis", "Heir 4", 2); break;
         case 22: new Match("S2J", "Trif", "Losers Eighths", "Dreamhack Rotterdam 2019", 1); break;
         case 23: new Match("Lucky", "Wizzrobe", "Losers Top 16", "The Big House 9", 1); break;
         case 24: new Match("Leffen", "Moky", "Winners Quarters", "Shine 2019", 2); break;
@@ -185,11 +178,71 @@ function matches(){
         case 82: new Match("Mango", "Leffen", "Winners Semis", "The Big House 9", 2); break;
         case 83: new Match("Duck", "Zain", "Grand Finals", "Pat's House 3", 1); break;
         case 84: new Match("Duck", "Axe", "Losers Top 12", "Shine 2016", 2); break;
-        case 85: new Match("Zain", "Mango", "Losers FInals", "GTX 2018", 2); break;
-        case 86: new Match("Lucky", "Axe", "Losers Top 12", "Evo 2015", 2); break;
-        case 87: new Match("Leffen", "Mew2King", "Losers Top 12", "Apex 2015", 1); break;
+        case 85: new Match("Zain", "Mango", "Losers Finals", "GTX 2018", 2); break;
+        case 86: new Match("Lucky", "Axe", "Losers Top 16", "Evo 2015", 2); break;
+        case 87: new Match("Leffen", "Mew2King", "Winners Quarters", "Apex 2015", 1); break;
         case 88: new Match("Westballz", "Leffen", "Winners Quarters", "Dreamhack Winter 2015", 1); break;
         case 89: new Match("Plup", "Shroomed", "Losers Top 16", "The Big House 5", 2); break;
         case 90: new Match("Armada", "Mango", "Losers Finals", "BEAST 5", 1); break;
+        case 91: new Match("Mango", "S2J", "Losers Eighths", "Smash Factor X", 2); break;
+        case 92: new Match("Wizzrobe", "Plup", "Winners Finals", "CEO 2023", 2); break;
+        case 93: new Match("Westballz", "Shroomed", "Winners Top 32", "Paragon L.A. 2015", 1); break;
+        case 94: new Match("Ginger", "Westballz", "Losers Top 16", "Apex 2022", 1); break;
+        case 95: new Match("Plup", "Mango", "Losers Semis", "Smash Summit", 2); break;
+        case 96: new Match("Shroomed", "Mango", "Winners Quarters", "CEO 2015", 1); break;
+        case 97: new Match("Aklo", "Trif", "Losers Top 12", "Smash Word Tour 2021", 2); break;
+        case 98: new Match("Gahtzu", "SDJ", "Winners Top 32", "Low Tide City 2021", 2); break;
+        case 99: new Match("Magi", "Lucky", "Losers Top 12", "Double Down 2022", 1); break;
+        case 100: new Match("Spark", "Salt", "Losers Top 24", "Shine 2022", 1); break;
+        case 101: new Match("Fiction", "Albert", "Winners Quarters", "Smash Camp 2022", 2); break;
+        case 102: new Match("Wizzrobe", "Albert", "Losers Top 12", "Low Tier City 4", 1); break;
+        case 103: new Match("PewPewU", "Hungrybox", "Winners Top 32", "Apex 2015", 1); break;
+        case 104: new Match("Cody Schwab", "Axe", "Winners Top 64", "Genesis 6", 2); break;
+        case 105: new Match("Westballz", "S2J", "Losers Eighths", "EVO 2016", 2); break;
+        case 106: new Match("Cody Schwab", "Jmook", "Winners Quarters", "The Big House 10", 1); break;
+        case 107: new Match("aMSa", "Polish", "Winners Top 32", "Pound 2022", 2); break;
+        case 108: new Match("Llod", "Mango", "Losers Top 16", "Pound 2022", 1); break;
+        case 109: new Match("Lucky", "n0ne", "Losers Top 12", "GOML 2022", 2); break;
+        case 110: new Match("Joshman", "Aklo", "Losers Eighths", "Fete 3", 1); break;
+        case 111: new Match("Leffen", "Joshman", "Round 2 Pools", "LACS 5", 2); break;
+        case 112: new Match("KoDoRiN", "Joshman", "Losers Top 12", "Battle of BC 4", 1); break;
+        case 113: new Match("Joshman", "Soonsay", "Winners Semis", "Emerald City X", 1); break;
+        case 114: new Match("Salt", "Soonsay", "Round 4 Pools", "Ludwig Smash Invitational", 2); break;
+        case 115: new Match("Magi", "Salt", "Losers Top 12", "Lost Tech City", 2); break;
+        case 116: new Match("Llod", "SluG", "Losers Top 12", "Genesis 8", 1); break;
+        case 117: new Match("SluG", "Magi", "Winners Quarters", "The Function 2", 1); break;
+        case 118: new Match("SluG", "Westballz", "Losers Top 24", "Genesis 7", 2); break;
+        case 119: new Match("Ginger", "S2J", "Losers Top 16", "Smash Summit 8", 1); break;
+        case 120: new Match("Albert", "SFAT", "Losers Top 12", "Mainstage 2021", 2); break;
+        case 121: new Match("Duck", "Spark", "Losers Top 24", "The Big House 8", 1); break;
+        case 122: new Match("Spark", "KoDoRiN", "Winners Semis", "Smash Camp 2022", 1); break;
+        case 123: new Match("KJH", "n0ne", "Losers Top 12", "Smash'N'Splash 2", 2); break;
+        case 124: new Match("KJH", "Cody Schwab", "Losers Top 12", "Full Bloom 5", 1); break;
+        case 125: new Match("KJH", "Lucky", "Losers Top 16", "Genesis 4", 2); break;
+        case 126: new Match("Ginger", "KJH", "Losers Semis", "Combo Breaker 2017", 2); break;
+        case 127: new Match("Mew2King", "KJH", "Losers Top 16", "Super Smash Con 2016", 1); break;
+        case 128: new Match("Hungrybox", "Polish", "Losers Quarters", "Smash World Tour 2021", 2); break;
+        case 129: new Match("Zain", "Mango", "Winners Quarters", "Smash Summit 6", 1); break;
+        case 130: new Match("Shroomed", "Zain", "Losers Top 12", "GOML 2017", 1); break;
+        case 131: new Match("Plup", "Moky", "Losers Top 12", "GOML 2019", 2); break;
+        case 132: new Match("Moky", "2Saint", "Losers Top 16", "Smash Summit 11", 1); break;
+        case 133: new Match("Moky", "Hungrybox", "Losers Eighths", "Mainstage 2022", 2); break;
+        case 134: new Match("Polish", "2Saint", "Losers Quarters", "The Nightclub VIP", 2); break;
+        case 135: new Match("2Saint", "KoDoRiN", "Losers Top 12", "Genesis 9", 1); break;
+        case 136: new Match("Jmook", "Mango", "Group D Pools", "Smash Summit 13", 2); break;
+        case 137: new Match("Magi", "KoDoRiN", "Losers Semis", "Low Tide City 2021", 2); break;
+        case 138: new Match("Jmook", "Zain", "Losers Quarters", "Riptide 2022", 1); break;
+        case 139: new Match("Jmook", "Wizzrobe", "Winner Semis", "CEO 2023", 2); break;
+        case 140: new Match("Fiction", "Mew2King", "Losers Quarters", "The Big House 9", 1); break;
+        case 141: new Match("Zuppy", "Llod", "Losers Quarters", "CEO 2023", 1); break;
+        case 142: new Match("KoDoRiN", "Zuppy", "Losers Top 12", "Super Smash Con 2023", 2); break;
+        case 143: new Match("Zuppy", "Cody Schwab", "Losers Top 12", "Apex 2022", 2); break;
+        case 144: new Match("Polish", "Zuppy", "Losers Top 24", "The Big House 11", 1); break;
+        case 145: new Match("Hungrybox", "Moky", "Losers Quarters", "LACS 4", 2); break;
+        case 146: new Match("Mew2King", "Plup", "Winner Quarters", "Smash Summit 4", 1); break;
+        case 147: new Match("PewPewU", "Shroomed", "Winner Top 32", "GOML 2016", 2); break;
+        case 148: new Match("Mango", "Hungrybox", "Grand Finals", "Pound 2016", 2); break;
+        case 149: new Match("Leffen", "Plup", "Winner Semis", "Eclipse 2015", 1); break;
+        case 150: new Match("Plup", "Leffen", "Winner Quarters", "Paragon Orlando 2015", 1); break;
     };
 };
